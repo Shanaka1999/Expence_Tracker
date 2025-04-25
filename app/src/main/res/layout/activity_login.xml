@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7A1DD">
+
+    <TextView
+        android:id="@+id/splashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MONEY\nMANAGER"
+        android:textSize="28sp"
+        android:textColor="#020A39"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="200dp"
+        android:shadowColor="#55000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <EditText
+        android:id="@+id/pinEditText"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/splashText"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter PIN"
+        android:inputType="numberPassword"
+        android:textColor="#333333"
+        android:textColorHint="#777777"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableLeft="@android:drawable/ic_lock_lock"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:paddingTop="10dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:textSize="18sp"
+        android:layout_below="@id/pinEditText"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

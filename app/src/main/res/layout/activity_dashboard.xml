@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F7F7F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/textViewTotalIncome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Income: LKR 16,762"
+            android:textSize="18sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewTotalExpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Expense: LKR 621,763"
+            android:textSize="18sp"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Balance: LKR 7,667"
+            android:textSize="18sp"
+            android:textColor="#3BBFBB"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+    <com.example.savepro.SimplePieChartView
+        android:id="@+id/simplePieChart"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewBudgetLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget Limit: LKR 0.0"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnAddTransaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add Transaction"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnSetBudgetLimit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate Budget"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <View
+            android:id="@+id/viewBalance"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/progress_bar_balance"/>
+
+        <View
+            android:id="@+id/viewExpense"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/progress_bar_expense"/>
+    </LinearLayout>
+
+
+
+
+
+
+    <ListView
+        android:id="@+id/listViewTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewNoTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No transactions available"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textColor="#9E9E9E"/>
+</LinearLayout>
